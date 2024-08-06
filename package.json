@@ -1,6 +1,11 @@
 {
   "devDependencies": {
-    "@qiita/qiita-cli": "^1.4.3"
+    "@qiita/qiita-cli": "^1.4.3",
+    "markdownlint": "^0.34.0",
+    "textlint": "^14.0.4",
+    "textlint-rule-preset-ja-technical-writing": "^10.0.1",
+    "textlint-rule-preset-jtf-style": "^2.3.14",
+    "textlint-rule-prh": "^6.0.0"
   },
   "dependencies": {
     "zenn-cli": "^0.1.154"

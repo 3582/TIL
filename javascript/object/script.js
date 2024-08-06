@@ -24,4 +24,4 @@ function filterStudentsByAge(students, minAge) {
 // 関数のテスト
 console.log(getAverageGrade(students));
 console.log(getTopStudent(students));
-console.log(filterStudentsByAge(students, 20));
+console.log(filterStudentsByAge(students, 21));
