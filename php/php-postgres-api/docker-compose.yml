@@ -1,0 +1,37 @@
+services:
+  web:
+    build:
+      context: .
+      dockerfile: ./web//Dockerfile
+    container_name: php-fpm
+    volumes:
+      - ./src:/var/www/html
+    depends_on:
+      - db
+
+  nginx:
+    image: nginx:latest
+    container_name: nginx
+    ports:
+      - "80:80"
+    volumes:
+      - ./nginx.conf:/etc/nginx/nginx.conf
+      - ./src:/var/www/html
+    depends_on:
+      - web
+
+  db:
+    build:
+      context: .
+      dockerfile: ./db/Dockerfile
+    container_name: postgres
+    environment:
+      POSTGRES_DB: til_db
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: example
+    volumes:
+      - pgdata:/var/lib/postgresql/data
+
+volumes:
+  pgdata:
+
