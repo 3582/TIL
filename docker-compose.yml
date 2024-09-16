@@ -1,0 +1,16 @@
+version: "3"
+services:
+  php_service:
+    container_name: php_container
+    build:
+      context: "./php/"
+    volumes:
+      - "./php:/var/www/html/php" # プロジェクトのコードをマウント
+      - "./composer.json:/var/www/html/composer.json" # composer.jsonをマウント
+      - "./composer.lock:/var/www/html/composer.lock" # composer.lockも必要ならマウント
+      - "./vendor:/var/www/html/vendor" # vendorディレクトリをマウント
+      - "./phpstan.neon:/var/www/html/phpstan.neon"
+    ports:
+      - "80:80"
+    command: >
+      sh -c "composer install && php-fpm"  # コンテナ起動時にcomposer installを実行し、PHP-FPMを開始
