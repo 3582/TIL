@@ -5,7 +5,7 @@
   },
   "autoload": {
     "psr-4": {
-      "Tdd\\test001\\": "php/tdd/001/"
+      "Tdd\\test001\\": "php/tdd/test001/"
     }
   }
 }

@@ -1,10 +1,13 @@
 <?php
 
+namespace Tdd\test001;
+
 use PHPUnit\Framework\TestCase;
 use Tdd\test001\BankAccount;
 
 class BankAccountTest extends TestCase
 {
+  // classが正しく作成できるか、そのプロパティが期待通りであるかどうか
   public function testBankAccountCreation(): void
   {
     $account = new BankAccount(1);
