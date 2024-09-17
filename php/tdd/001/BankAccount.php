@@ -2,6 +2,8 @@
 
 declare(strict_types=1);
 
+namespace Tdd\test001;
+
 use InvalidArgumentException;
 use DateTime;
 

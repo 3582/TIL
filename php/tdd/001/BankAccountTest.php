@@ -1,7 +1,7 @@
 <?php
 
-use BankAccount;
 use PHPUnit\Framework\TestCase;
+use Tdd\test001\BankAccount;
 
 class BankAccountTest extends TestCase
 {

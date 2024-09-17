@@ -1,6 +1,11 @@
 {
-    "require-dev": {
-        "phpunit/phpunit": "^9.6",
-        "phpstan/phpstan": "^1.12"
+  "require-dev": {
+    "phpunit/phpunit": "^9.6",
+    "phpstan/phpstan": "^1.12"
+  },
+  "autoload": {
+    "psr-4": {
+      "Tdd\\test001\\": "php/tdd/001/"
     }
+  }
 }
